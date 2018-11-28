@@ -1,0 +1,17 @@
+<div class="container content-wrapper buffer-both">
+  <h1 class="title-medium">Edit user</h1>
+  <h3 class="title-medium">User's email: <%= @user.email %></h3>
+
+  <div class="column-1-2">
+    <%= form_for @user do |f| %>
+      <div class="form-field">
+        <%= f.label :name, 'Name', class: 'form-label' %>
+        <%= f.text_field :name, class: 'form-text-field' %>
+      </div>
+
+      <div class="form-action">
+        <%= f.submit 'Save', class: 'button button-small button-dark' %>
+      </div>
+    <% end %>
+  </div>
+</div>

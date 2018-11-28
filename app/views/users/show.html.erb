@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h1 class="title-medium">
+    <%= user_show(@user) %>
+  </h1>
+
+  <div class="buffer-both">
+    <%= link_to 'Edit profile', edit_user_path(@user) if current_user == @user %>
+  </div>
+</div>

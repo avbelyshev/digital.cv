@@ -1,0 +1,31 @@
+<div class="container content-wrapper buffer-both">
+  <h1 class="title-medium">Join us!</h1>
+
+  <div class="column-1-2">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="form-errors">
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li class="form-error-message"><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-field">
+        <%= f.label :email, 'Email', class: 'form-label' %>
+        <%= f.email_field :email, class: 'form-text-field' %>
+      </div>
+
+      <div class="form-field">
+        <%= f.label :name, 'Name', class: 'form-label' %>
+        <%= f.text_field :name, class: 'form-text-field' %>
+      </div>
+
+      <div class="form-action">
+        <%= f.submit 'Register', class: 'button button-small button-dark' %>
+      </div>
+    <% end %>
+  </div>
+</div>
